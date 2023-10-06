@@ -1,0 +1,39 @@
+$color-white: #fff;
+$hover-color: #00afea;
+$background-color: #4b5471;
+$background-gradient: linear-gradient(to right, #bbb, #f1f1f1);
+
+$transition: 0.5s ease all;
+$enter-delay: 200ms;
+
+$box-shadow: 0 2px 5px #f5f5f5;
+
+/*** Class btn **/
+.btn {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 1.2empx;
+  font-weight: bold;
+  background-color: #4460aa;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  text-align: center;
+}
+.btn:hover {
+  color: #4460aa;
+  background-color: #fff;
+}
+.btn-service {
+  display: block;
+  width: 15%;
+  margin: 20px auto;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460aa;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
