@@ -49,6 +49,7 @@ export default {
           const newEmail = res.data.user.email;
           userStore.updateUserRole(newRole, newEmail);
           localStorage.setItem("role", newRole);
+          //this.$router.push("/dashboard");
           location.replace("/dashboard");
         });
     },

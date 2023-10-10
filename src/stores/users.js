@@ -13,9 +13,9 @@ export const useUserStore = defineStore("user", {
       this.currentUserEmail = newEmail;
       this.userRole = newRole;
     },
-    userDeconnexion() {
-      this.currentUserEmail = "";
-      this.userRole = false;
+    userDeconnexion(newRole, newEmail) {
+      this.currentUserEmail = newRole;
+      this.userRole = newEmail;
     },
   },
   getters: {
@@ -26,4 +26,5 @@ export const useUserStore = defineStore("user", {
       return state.currentUserEmail;
     },
   },
+  persist: { storage: localStorage },
 });

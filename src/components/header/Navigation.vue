@@ -188,9 +188,11 @@ export default {
       return;
     },
     deconnexion() {
+      const userStore = useUserStore();
+      console.log(userStore);
       localStorage.clear();
       this.etat = "";
-      useUserStore.userDeconnexion();
+      userStore.userDeconnexion(false, "");
       location.replace("/");
     },
   },
