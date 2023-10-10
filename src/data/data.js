@@ -21,7 +21,6 @@ const dataFormation = [
       "Postman",
       "Mysql",
       "Mongodb",
-      "Mongodb",
     ],
     certification: "src/assets/images/Diplomedevweb.jpg",
   },

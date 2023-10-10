@@ -15,6 +15,7 @@ import {
   faEnvelopesBulk,
   faCheck,
   faFaceLaughWink,
+  faDoorOpen,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -39,7 +40,8 @@ library.add(
   faAt,
   faEnvelopesBulk,
   faCheck,
-  faFaceLaughWink
+  faFaceLaughWink,
+  faDoorOpen
 );
 
 export default FontAwesomeIcon;

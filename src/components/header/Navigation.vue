@@ -54,7 +54,16 @@
               />Contact</router-link
             >
           </li>
+          <li v-show="this.etat" @click="deconnexion">
+            <router-link class="link" :to="{ name: 'Home' }">
+              <font-awesome-icon
+                class="fa-icon"
+                icon="fa-solid  fa-door-open"
+              />Déconnexion</router-link
+            >
+          </li>
         </ul>
+
         <div class="burger" v-show="mobile">
           <div class="icon" :class="{ 'icon-active': mobileNav }">
             <i @click="toggleMobileNav"
@@ -140,10 +149,14 @@
 </template>
 
 <script>
+import { useUserStore } from "../../stores/users";
+
 export default {
   name: "navigation",
+
   data() {
     return {
+      etat: localStorage.getItem("role"),
       scrollPosition: null,
       mobile: false,
       mobileNav: null,
@@ -155,6 +168,7 @@ export default {
     window.addEventListener("resize", this.checkScreen);
     this.checkScreen();
   },
+
   methods: {
     hideMobileMenu() {
       alert("coucou");
@@ -172,6 +186,12 @@ export default {
       this.mobile = false;
       this.mobileNav = false;
       return;
+    },
+    deconnexion() {
+      localStorage.clear();
+      this.etat = "";
+      useUserStore.userDeconnexion();
+      location.replace("/");
     },
   },
 };

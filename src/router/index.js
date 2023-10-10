@@ -9,6 +9,18 @@ const router = createRouter({
       name: "ErrorPage",
       component: HomeView,
     },
+    /************************** Admin ************/
+    {
+      path: "/connexion",
+      name: "connexion",
+      component: () => import("../views/adminViews/connexion.vue"),
+    },
+    {
+      path: "/dashboard",
+      name: "dashboard",
+      component: () => import("../views/adminViews/dashboardView.vue"),
+    },
+    /*************Users **************************/
     {
       path: "/",
       name: "Home",
